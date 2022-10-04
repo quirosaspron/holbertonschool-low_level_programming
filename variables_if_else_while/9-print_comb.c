@@ -5,12 +5,16 @@
 int main(void)
 {
 	int c;
-	char b;
 
 	for (c = '0'; c <= '9'; ++c)
+	{
 		putchar(c);
-	for (b = 'a'; b<='f'; ++b)
-		putchar(b);
+		if (c != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}	
 	putchar('\n');
 	return (0);
 }
