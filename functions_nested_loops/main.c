@@ -7,9 +7,6 @@
  */
 int main(void)
 {
-	int a; 
-
-	a = print_last_digit(24);
-	_putchar(a);
+	times_table();
 	return (0);
 }
