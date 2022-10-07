@@ -7,6 +7,9 @@
  */
 int main(void)
 {
-	print_sign(43);
+	int a; 
+
+	a = print_last_digit(24);
+	_putchar(a);
 	return (0);
 }
