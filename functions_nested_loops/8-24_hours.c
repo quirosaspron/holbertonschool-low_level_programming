@@ -5,7 +5,7 @@
  * Return: void
  */
 
-void jack_bauer(void);
+void jack_bauer(void)
 {
 	for (h = 0; h <= 23; h++)
 		{
