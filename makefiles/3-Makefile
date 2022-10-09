@@ -16,5 +16,5 @@ oclean:
 fclean:
 	$(RM) *.tmp; $(RM) $(NAME); $(RM) *.o
 
-re:
+re: $(SRC)
 	$(CC) $(SRC) -o $(NAME)
