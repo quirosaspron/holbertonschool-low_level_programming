@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * puts_half - Prints out the first half of a string.
+ * puts_half - Prints out the second half of a string.
  * @str: input string to print.
  * */
 void puts_half(char *str)
@@ -15,7 +15,7 @@ void puts_half(char *str)
 		else
 			j = (i + 1) / 2;
 	}
-	while (j < i)
+	while (j > i)
 	{
 		_putchar(str[j]);
 		j++;
