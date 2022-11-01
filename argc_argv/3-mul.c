@@ -13,11 +13,11 @@ int main(int argc, char *argv[])
         a = atoi(argv[1]);
         b = atoi(argv[2]);
         print("%d", a * b);
-        return 0;
+        return (0);
     }
     else
     {
         print("Error \n");
-        return 1;
+        return (1);
     }
 }
