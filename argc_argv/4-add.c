@@ -24,20 +24,21 @@ int main(int argc, char *argv[])
     int result = 0;
     int j = 0;
 
-    for (i = 0; i <= argc; i++)
-        if (isdigit(argv[i]) == 0)
-        {
-            printf("Error\n");
-		    return (1);
-        }
+	for (i = 1; i < argc; i++)
+	{
+		for (j = 0; argv[i][j]; j++)
+		{
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 
-    else if (argc == '1')
-    {
-        printf("0\n");
-    }
+		result += atoi(argv[i]);
+	}
 
-	for (j = 1; j <= argc; j++)
-		result += atoi(argv[j]);
 	printf("%d\n", result);
+
 	return (0);
 }
