@@ -18,12 +18,6 @@
  * Return: 0 on success, 1 on failure
  */
 
-int checker(int argc, char *argv[])
-{
-	
-
-}
-
 int main(int argc, char *argv[])
 {
     int i = 0;
