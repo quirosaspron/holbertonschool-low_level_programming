@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		    return (1);
         }
 
-    if (argc == 1)
+    else if (argc == '1')
     {
         printf("0\n");
     }
