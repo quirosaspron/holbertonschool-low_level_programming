@@ -2,19 +2,13 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-/**
- * checker - checks for valid input
- * @argc: argument count
- * @i: counter for argv[]
- * @j: counter for argv[][]
- * @argv: argument vector
- * Return: 0 on success, 1 on failure
- */
 
  /**
  * main - adds all arguments together if they are digits.
- * @argc: argument count only accepts ints separated by spaces.
+ * @argc: argument count
  * @argv: argument vector
+ * @i: counter for argv[]
+ * @j: counter for argv[][]
  * Return: 0 on success, 1 on failure
  */
 
