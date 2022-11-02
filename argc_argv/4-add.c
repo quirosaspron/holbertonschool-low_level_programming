@@ -21,20 +21,20 @@
 int main(int argc, char *argv[])
 {
     int i = 0;
+    int result = 0;
+    int j = 0;
+
     for (i = 0; i <= argc; i++)
-        if isdigit(argv[i]) == 0
+        if (isdigit(argv[i]) == 0)
         {
             printf("Error\n");
 		    return (1);
         }
 
-    if argc == 1
+    if (argc == 1)
     {
         printf("0\n");
     }
-
-	int result = 0;
-    int j = 0;
 
 	for (j = 1; j <= argc; j++)
 		result += atoi(argv[j]);
