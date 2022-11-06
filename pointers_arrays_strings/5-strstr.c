@@ -9,6 +9,9 @@
  {
     int i;
 
+    if (*needle == 0)
+	    return (haystack);
+
     while (*haystack)
 	{
 		i = 0;
