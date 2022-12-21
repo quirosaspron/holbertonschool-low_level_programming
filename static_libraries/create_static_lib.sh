@@ -1,4 +1,3 @@
 #!/bin/bash
-gcc -c *.c
-ar rc libmy.a *.o
-ranlib libmy.a
+gcc -Wall -Werror -Wextra -pedantic -c *.c
+ar -rc liball.a *.o
