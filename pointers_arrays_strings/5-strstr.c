@@ -1,30 +1,34 @@
 /**
- * _strstr - locates a substring
- * @haystack: string to search in
- * @needle: substring to search for
- *
- * Return: pointer to beginning of located substring or NULL if not found
+ * _strstr - fidn the first occurrence of the substrng
+ * @haystack: segment to compare bytes from
+ * @needle: substring to look for in haystack
+ * Return: a pointer
  */
+
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int i;
 
 	if (*needle == 0)
 		return (haystack);
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	while (*haystack)
 	{
-		j = 0;
-		if (haystack[i] == needle[j])
+		i = 0;
+
+		if (haystack[i] == needle[i])
 		{
-			for (; needle[j] != '\0'; j++)
-			{
-				if (haystack[i + j] != needle[j])
-					break;
-			}
-			if (needle[j] == '\0')
-				return (haystack + i);
+			do {
+				if (needle[i + 1] == '\0')
+					return (haystack);
+
+				i++;
+
+			} while (haystack[i] == needle[i]);
 		}
+
+		haystack++;
 	}
-	return (NULL);
+
+	return ('\0');
 }
