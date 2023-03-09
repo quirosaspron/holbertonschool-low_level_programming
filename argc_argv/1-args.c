@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - program prints its own name.
+ * main - program prints the number of argument vectors
  * @argc: argument count
  * @argv: argument vectors
  * Return: 0 on success
@@ -13,8 +13,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < argc - 1; i++)
 	{
-
-	} 
+	}
 	printf("%d\n", i);
 	return (0);
 }
