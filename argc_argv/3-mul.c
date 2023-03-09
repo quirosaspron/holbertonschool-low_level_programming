@@ -10,13 +10,14 @@
 int main(int argc, char *argv[])
 {
 	int multi;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
-		return (0);	
+		return (0);
 	}
 
 	multi = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n",multi);
+	printf("%d\n", multi);
 	return (0);
 }
