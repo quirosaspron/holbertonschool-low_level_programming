@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - program prints the argument vectors followed by a new line
+ * main - program prints the multiplication of the argument vectors
  * @argc: argument count
  * @argv: argument vectors
  * Return: 0 on success
