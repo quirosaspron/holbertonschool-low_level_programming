@@ -23,7 +23,10 @@ int _sqrt_recursion(int n)
 	root = _sqrt_recursion(n / 2) * 2;
 	if (root > n / _sqrt_recursion(n / 2))
 	{
-		return (-1);
+		return (_sqrt_recursion(n / 2));
 	}
-	return (root);
+	else
+	{
+		return (root);
+	}
 }
