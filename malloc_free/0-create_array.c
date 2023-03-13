@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
   * create_array - creates an array of size n, and initialized with c
@@ -23,5 +24,5 @@ char *create_array(unsigned int size, char c)
 		ar[i] = c;
 	}
 	return (ar);
-	free (ar);
+	free(ar);
 }
