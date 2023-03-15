@@ -28,6 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
+	j = 0;
 	for (i = 0; s1[i]; i++)
 	{
 		str_ncnct[j++] = s1[i];
