@@ -1,8 +1,9 @@
 #include <stdlib.h>
 /**
- * malloc_checked - Allocates memory using malloc.
- * @b: The size of the memory to be allocated.
- * Return: Pointer to the allocated memory
+ * _calloc - Allocates memory for an array.
+ * @nmemb: Number of elements of the array
+ * @size: Size of the elements of the array
+ * Return: A pointer to the allocated memory
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
