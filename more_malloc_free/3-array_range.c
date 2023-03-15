@@ -9,14 +9,14 @@
 int *array_range(int min, int max)
 {
 	int *arr;
-	int i, j, elements;
+	int i, j, range;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
-	elements = max - min;
-	arr = malloc(sizeof(int) * elements);
+	range = max - min;
+	arr = malloc(sizeof(int) * range);
 	if (arr == NULL)
 	{
 		return (NULL);
@@ -26,6 +26,5 @@ int *array_range(int min, int max)
 	{
 		arr[j++] = i;
 	}
-	arr[j + 1] = max;
 	return (arr);
 }
