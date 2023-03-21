@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stddef.h>
 /**
  * init_dog - initializes a dog structure with the given values
  * @d: pointer to the dog structure to initialize
