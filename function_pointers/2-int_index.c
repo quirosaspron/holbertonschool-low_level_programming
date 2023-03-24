@@ -5,6 +5,7 @@
  * @array: array whose elements will be searched
  * @size: size of the array
  * @cmp: function that'll compare values
+ * Return: i if index found, or -1 in other cases
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
