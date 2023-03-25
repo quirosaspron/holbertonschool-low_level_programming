@@ -20,6 +20,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		if (i = 0)
 		{
 			printf("%d", param);
+		}
 		else if (separator == NULL)
 		{
 			printf("%d", param);
