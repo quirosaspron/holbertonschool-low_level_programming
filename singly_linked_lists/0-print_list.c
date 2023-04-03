@@ -11,7 +11,8 @@ size_t print_list(const list_t *h)
 
 	while (current != NULL)
 	{
-		_putchar(current -> str);
+		printf("%s \n", current -> str);
 		current = current -> next;
 	}
+	return (0);
 }
