@@ -1,0 +1,8 @@
+-> es el remplazo de decir (*n).
+En 2-add_node solo me falta calcular el len de la str
+Casi todo esta explicado en cs50 en el video de data structures 2022
+La clave del ejercicio de como print los elementos de una linked list esta en saber como iterar sobre una lista de este tipo
+Mientras mas investigas y mas sabes sobre los fundamentos de lo que estas haciendo mas facil se vuelve y menos ayuda externa necesitas.
+Tengo que pensar como voy a recodrdar todo esto que estoy aprendiendo.
+Lo mas importante es conceptulaizar y ver lo que quieres hacer, despues de eso la implementacion en el codigo es trivial
+El valor esta en los conceptos y las ideas mas abstractas, el como (el codigo) es secundario y es lo ultimo y menos valioso que se hace. 
