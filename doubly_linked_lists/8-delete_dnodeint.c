@@ -24,7 +24,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		count++;
 		counter = counter->next;
 	}
-	if (index > count || index < 0)
+	if (index > count)
 	{
 		return (-1);
 	}
