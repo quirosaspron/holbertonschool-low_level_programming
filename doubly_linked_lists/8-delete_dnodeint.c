@@ -13,7 +13,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *temp_2 = temp->next;
 	int i = index;
 
-	new_node->d = n;
 	while (i != 0)
 	{
 		temp->next = temp_2->next;
