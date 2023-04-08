@@ -7,7 +7,7 @@
  * @index: index of the list where the new node should be added
  */
 
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *temp = *head;
 	dlistint_t *temp_2 = temp->next;
