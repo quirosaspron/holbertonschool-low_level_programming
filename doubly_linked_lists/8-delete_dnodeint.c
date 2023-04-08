@@ -9,48 +9,54 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp;
-	dlistint_t *temp_2;
-	dlistint_t *counter;
-	unsigned int i = index;
-	unsigned int count = 0;
+    dlistint_t *temp;
+    dlistint_t *prev;
+    dlistint_t *next;
+    unsigned int i = 0;
 
-	if (*head == NULL)
-	{
-		return (-1);
-	}
-	temp = *head;
-	temp_2 = temp->next;
-	counter = *head;
-	while (counter != NULL)
-	{
-		count++;
-		counter = counter->next;
-	}
-	if (index > count)
-	{
-		return (-1);
-	}
-	if (index == 0)
-	{
-		*head = (*head)->next;
-		if (*head != NULL)
-		{
-			(*head)->prev = NULL;
-		}
-		free(temp);
-		return (1);
-	}
-	while (i > 0)
-	{
-		temp->next = temp_2->next;
-		if (temp_2->next != NULL)
-		{
-			temp_2->next->prev = temp;
-		}
-		free(temp_2);
-		temp_2 = temp->next;
-		i--;
-	}
-	return (1);
+    if (*head == NULL)
+    {
+        return (-1);
+    }
+
+    temp = *head;
+
+    if (index == 0)
+    {
+        *head = temp->next;
+        if (*head != NULL)
+        {
+            (*head)->prev = NULL;
+        }
+        free(temp);
+        return (1);
+    }
+
+    while (i < index && temp != NULL)
+    {
+        temp = temp->next;
+        i++;
+    }
+
+    if (temp == NULL)
+    {
+        return (-1);
+    }
+
+    prev = temp->prev;
+    next = temp->next;
+
+    if (prev != NULL)
+    {
+        prev->next = next;
+    }
+
+    if (next != NULL)
+    {
+        next->prev = prev;
+    }
+
+    free(temp);
+
+    return (1);
 }
