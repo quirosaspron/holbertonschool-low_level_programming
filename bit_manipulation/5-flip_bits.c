@@ -6,16 +6,19 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int xor_result = n ^ m;
 	unsigned int num_bits = 0;
+	unsigned long int xor_result;
 
+	xor_result = n ^ m;
 	while (xor_result)
 	{
-		if (xor_result & 1)
-		{
-			num_bits++;
-			xor_result >>= 1;
-		}
+		num_bits += (xor_result & 1);
+		xor_result >>= 1;
 	}
 	return (num_bits);
 }
+
+
+
+
+
