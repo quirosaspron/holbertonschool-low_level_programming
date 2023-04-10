@@ -13,6 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t total_letters_read = 0;
 	ssize_t i;
 	ssize_t letters_read;
+	ssize_t ltrs = (ssize_t)letters;
 
 	if (filename == NULL)
 	{
@@ -22,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	while ((letters_read = read(file, buffer, sizeof(buffer))) < 100)
+	while ((letters_read = read(file, buffer, sizeof(buffer))) > 0 && total_letters_read < ltrs)
 	{
 		for (i = 0; i < letters_read; i++)
 		{
