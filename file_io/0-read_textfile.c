@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	while ((letters_read = read(file, buffer, sizeof(buffer))) > 100)
+	while ((letters_read = read(file, buffer, sizeof(buffer))) < 100)
 	{
 		for (i = 0; i < letters_read; i++)
 		{
