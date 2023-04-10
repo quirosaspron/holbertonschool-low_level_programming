@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	while (total_letters_read < ltrs)
 	{
-		letters_read = read(file, buffer, sizeof(buffer));
+		letters_read = read(file, buffer, (sizeof(char) * letters));
 		for (i = 0; i < letters_read; i++)
 		{
 			_putchar(buffer[i]);
