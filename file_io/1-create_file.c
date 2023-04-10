@@ -11,6 +11,7 @@ int create_file(const char *filename, char *text_content)
 	int file;
 	ssize_t content;
 	size_t count = 0;
+	int trn;
 
 	if (filename == NULL)
 	{
@@ -31,6 +32,11 @@ int create_file(const char *filename, char *text_content)
 	}
 	content = write(file, text_content, count);
 	if (content == -1)
+	{
+		return (-1);
+	}
+	trn = truncate(file, count);
+	if (trn == -1)
 	{
 		return (-1);
 	}
