@@ -10,12 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-	struct stat statbuf;
-	off_t size;
-	int src;
-	int dst;
 	char buffer[1024];
-	int n, i, sc, cc;
+	int src, dst, n, i, sc, cc;
 
 	if (argc != 3)
 	{
