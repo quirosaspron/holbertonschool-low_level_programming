@@ -17,7 +17,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	available = access(filename, W_OK);
+	exists_and_can_write = access(filename, W_OK);
 	if (available == -1)
 	{
 		return (-1);
@@ -27,7 +27,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	if (text_content == NULL && available == 1)
+	if (text_content == NULL && file == 1)
 	{
 		return (1);
 	}
