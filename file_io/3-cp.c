@@ -34,6 +34,11 @@ int main(int argc, char *argv[])
 		exit (98);
 	}
 	src = open(argv[1], O_RDONLY);
+	if (src == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit (98);
+	}
 	dst = open(argv[2], O_WRONLY | O_CREAT, 0664);
 	if (dst == -1)
 	{
