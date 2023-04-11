@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	}
 	if (access(argv[1], F_OK) == -1 || access(argv[1], R_OK) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	src = open(argv[1], O_RDONLY);
