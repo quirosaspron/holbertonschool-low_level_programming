@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	}
 	while ((n = read(src, buffer, 1024 )) > 0)
 	{	
-		if (n == -1)
+		if (n < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit (98);
