@@ -5,10 +5,10 @@
  * main - copies the contents of a file to another file
  * @argc: argument count
  * @argv: argument vector
+ * Return: 0
  */
 
-
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	struct stat statbuf;
 	off_t size;
@@ -56,4 +56,5 @@ void main(int argc, char *argv[])
 		dprintf(2, "Error: Can't close fd -1");
 		exit (100);
 	}
+	return (0);
 }
