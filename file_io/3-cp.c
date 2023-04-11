@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		exit (98);
 	}
 	src = open(argv[1], O_RDONLY);
-	dst = open(argv[2], O_WRONLY | O_CREAT, 664);
+	dst = open(argv[2], O_WRONLY | O_CREAT, 0644);
 	if (dst == -1)
 	{
 		dprintf(2, "Error: Can't write to %s\n", argv[2]);
