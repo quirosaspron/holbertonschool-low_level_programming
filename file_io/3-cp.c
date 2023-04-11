@@ -23,9 +23,11 @@ int main(int argc, char *argv[])
 	if (dst == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit (99);
 	while ((n = read(src, buffer, 1024 )) > 0)
+	{
 		i = write(dst, buffer, n);
 		if (i == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit (99);
+	}
 	if (n == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit (98);
 	sc = close(src);
