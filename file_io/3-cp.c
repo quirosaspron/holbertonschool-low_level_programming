@@ -28,12 +28,12 @@ int main(int argc, char *argv[])
 		size = statbuf.st_size;
 		truncate(argv[2], (size_t) size);
 	}
-	src = open(argv[1], O_RDONLY);
-	if (src == -1)
+	if (access(file_from, F_OK) == -1 || access(file_from, R_OK) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit (98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
 	}
+	src = open(argv[1], O_RDONLY);
 	dst = open(argv[2], O_WRONLY | O_CREAT, 0664);
 	if (dst == -1)
 	{
