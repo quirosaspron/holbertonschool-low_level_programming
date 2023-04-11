@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		size = statbuf.st_size;
 		truncate(argv[2], (size_t) size);
 	}
-	if (access(argv[1], F_OK) == -1 || access(argv[1], R_OK) == -1)
+	if (access(argv[1], F_OK) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit (98);
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 	{	
 		if (n == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n");
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit (98);
 		}
 		i = write(dst, buffer, n);
