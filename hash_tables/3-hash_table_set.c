@@ -28,6 +28,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->key = (char *)dup_key;
 	new_node->value = dup_value;
 	new_node->next = NULL;
+	if (ht->array[i] == NULL)
+	{
+		ht->array[i] = new_node;
+		return (1);
+	}
 	if (ht->array[i] != NULL)
 	{
 		current = ht->array[i];
