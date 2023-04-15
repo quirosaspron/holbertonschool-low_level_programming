@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <stdbool.h>
 /**
  * hash_table_print - prints a hash table
  * @ht: the hash table
