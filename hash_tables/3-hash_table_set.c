@@ -36,11 +36,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[i] != NULL)
 	{
 		current = ht->array[i];
-		while (current->next != NULL && current->key != dup_key)
+		while (current->next != NULL && strcmp(current->key, dup_key) != 0)
 		{
 			current = current->next;
 		}
-		if (current->next == NULL && current->key != dup_key)
+		if (current->next == NULL && strcmp(current->key, dup_key) != 0)
 		{
 			new_node->next = ht->array[i];
 			ht->array[i] = new_node;
