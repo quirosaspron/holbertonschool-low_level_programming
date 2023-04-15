@@ -20,18 +20,22 @@ void hash_table_print(const hash_table_t *ht)
 	{
 		if (ht->array[i] != NULL)
 		{
-			while (current->next != NULL)
+			while (current != NULL)
 			{
 				printf("'%s': '%s',", current->key, current->value);
+				if (current ->next != NULL)
+				{
+					printf(", ");
+				}
 				current = current->next;
-			}
-			if (current->next == NULL)
-			{
-				printf("'%s': '%s'", current->key, current->value);
 			}
 		}
 		i++;
+		if (i != ht->size && ht->array[i] != NULL)
+		{
+			printf(", ");
+			current = ht->array[i];
+		}
 	}
-	printf("}");
-	exit(0);
+	printf("}\n");
 }
